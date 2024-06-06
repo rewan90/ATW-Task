@@ -1,0 +1,10 @@
+
+{
+  "compilerOptions": {
+    "baseUrl": ".", // Set the base URL for relative imports
+    "paths": {
+      "@/*": ["src/*"] // Map @ to src directory
+    }
+  },
+  "exclude": ["node_modules", "dist"] // Exclude node_modules and dist from compilation
+}
