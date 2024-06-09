@@ -1,19 +1,25 @@
-<script setup>
-import {  RouterView } from 'vue-router'
-// import NavBar from './components/NavBar.vue';
-import FooterBar from './components/FooterBar.vue';
-
-</script>
 
 <template>
-<!-- <NavBar/> -->
     
+    <!-- Render the nav component if the current route does not have the 'hideNav' property -->
+    <NavBar v-if="!$route.meta.hideNav" />
 
-  <RouterView />
-  <FooterBar/>
+    <RouterView />
+    <FooterBar/>
+
 </template>
 
-<style>
 
+<script>
+import { RouterView } from 'vue-router';
+import NavBar from './components/NavBar.vue';
+import FooterBar from './components/FooterBar.vue';
 
-</style>
+export default {
+  components: {
+    RouterView,
+    NavBar,
+    FooterBar
+  }
+}
+</script>

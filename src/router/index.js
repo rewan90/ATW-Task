@@ -11,6 +11,9 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView,
+    meta: {
+      hideNav: true // Add this property to the route
+    }
   },
   {
     path: '/about',

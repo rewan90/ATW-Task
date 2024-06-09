@@ -1,6 +1,6 @@
 <template>
-  <section class="hero-img ">
-    <nav class="navbar navbar-expand-lg navbar-light mask-custom shadow-0">
+  <section class="hero-img">
+    <nav class="navbar navbar-expand-lg navbar-light  shadow-0">
       <div class="container">
         <a class="navbar-brand mx-5" href="#!">
           <img src="../../assets/logo.svg" alt="logo" width="150px" />
@@ -14,37 +14,36 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-        <font-awesome-icon :icon="['fas', 'fa-bars']" class="whit-text"/>
-
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav mx-auto d-flex  align-items-center">
-    <li class="nav-item mx-3">
-      <a class="nav-link">
-        <RouterLink to="/">Home</RouterLink>
-      </a>
-    </li>
-    <li class="nav-item mx-3">
-      <a class="nav-link">
-        <RouterLink to="/about">About</RouterLink>
-      </a>
-    </li>
-    <li class="nav-item mx-3">
-      <a class="nav-link">
-        <RouterLink to="/blog">Blog</RouterLink>
-      </a>
-    </li>
-    <li class="nav-item mx-3">
-      <a class="nav-link" href="#!">Cart</a>
-    </li>
-    <li class="nav-item mx-4">
-      <button type="button" class="btn rounded-pill outline">Login</button>
-    </li>
-    <li class="nav-item mx-4">
-      <button type="button" class="btn btn-primary rounded-pill btn-custom">Sign Up</button>
-    </li>
-  </ul>
-</div>
+          <font-awesome-icon :icon="['fas', 'fa-bars']" class="whit-text" />
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto d-flex align-items-center">
+            <li class="nav-item mx-3">
+              <a class="nav-link">
+                <RouterLink to="/">Home</RouterLink>
+              </a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link">
+                <RouterLink to="/about">About</RouterLink>
+              </a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link">
+                <RouterLink to="/blog">Blog</RouterLink>
+              </a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#!">Cart</a>
+            </li>
+            <li class="nav-item mx-4">
+              <button type="button" class="btn rounded-pill outline">Login</button>
+            </li>
+            <li class="nav-item mx-4">
+              <button type="button" class="btn btn-primary rounded-pill btn-custom">Sign Up</button>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -87,13 +86,11 @@
   gap: 0px;
   opacity: 0px;
   background-size: 100% 100%;
-  background: linear-gradient(181.14deg, #D9D9D9 21.73%, rgba(217, 217, 217, 0) 100.26%);
+  background: linear-gradient(181.14deg, #d9d9d9 21.73%, rgba(217, 217, 217, 0) 100.26%);
   background: rgba(0, 0, 0, 0.55);
-
 }
-nav{
+nav {
   background: rgba(0, 0, 0, 0.25);
-
 }
 
 .hero-img {
@@ -104,9 +101,7 @@ nav{
   position: relative;
   text-align: center;
 }
-nav .navbar-nav li a {
-  color: white !important;
-}
+
 input {
   width: 25% !important;
   margin-right: 10px;
@@ -118,14 +113,5 @@ input {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-nav,ul,li,a{
-  font-family: Poppins;
-font-size: 20px;
-font-weight: 400;
-line-height: 30px;
-text-align: left;
-
-}
-
 
 </style>
