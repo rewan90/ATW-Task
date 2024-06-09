@@ -1,4 +1,6 @@
 <template>
+    <div class="wrapper">
+
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6">
@@ -40,6 +42,7 @@
       </div>
     </div>
   </div>
+    </div>
 </template>
 
 <script>
@@ -109,4 +112,5 @@ export default {
   padding: 20px;
   margin-top: 20px;
 }
+
 </style>

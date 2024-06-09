@@ -5,6 +5,8 @@ import router from './router'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
+import 'vue-toast-notification/dist/theme-bootstrap.css';
+import ToastPlugin from 'vue-toast-notification';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import Swiper from 'swiper/bundle'
@@ -23,6 +25,7 @@ import {
 
 const app = createApp(App)
 const swiper = new Swiper()
+app.use(ToastPlugin);
 
 app.config.globalProperties.$swiper = swiper
 

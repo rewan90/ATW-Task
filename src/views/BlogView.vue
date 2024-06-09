@@ -1,10 +1,14 @@
 <template>
+        <div class="wrapper">
+
   <div class="container">
     <h1 class="mb-4 d-flex justify-content-between align-items-center">
       Blog Posts
       <div class="d-flex justify-content-between align-items-center">
-        <RouterLink to="/add" class="btn btn-primary rounded-pill btn-lg me-3 btn-custom me-2">Add</RouterLink>
-        <RouterLink to="/comments" class="btn btn-secondary rounded-pill ">Comments</RouterLink>
+        <RouterLink to="/add" class="btn btn-primary rounded-pill btn-lg me-3 btn-custom me-2"
+          >Add</RouterLink
+        >
+        <RouterLink to="/comments" class="btn btn-secondary rounded-pill">Comments</RouterLink>
       </div>
     </h1>
     <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -12,15 +16,18 @@
         <div class="card h-100">
           <div class="card-body">
             <h4 class="card-title">{{ post.title }}</h4>
-            <hr>
+            <hr />
             <p class="card-text">{{ post.body }}</p>
             <div class="d-flex justify-content-end">
               <RouterLink
                 :to="`/edit/${post.id}`"
-                class="btn btn-primary rounded-pill btn-custom pr-2  me-2"
+                class="btn btn-primary rounded-pill btn-custom pr-2 me-2"
                 >Edit</RouterLink
               >
-              <button class="btn btn-danger rounded-pill" @click="deletePost(post.id)">
+              <button
+                @click="deletePost(post.id)"
+                class="btn btn-danger rounded-pill"
+              >
                 Delete
               </button>
             </div>
@@ -29,6 +36,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -55,18 +63,28 @@ export default {
     },
     // Deletes a post with the specified ID.
     async deletePost(id) {
-      if (!id) {
-        console.error('Invalid ID provided for deleting post')
-        return
-      }
-      try {
-        await axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
-        console.log(`Post with ID ${id} has been deleted.`)
-        this.posts = this.posts.filter((post) => post.id !== id)
-      } catch (error) {
-        console.error(`Error deleting post with ID ${id}:`, error)
-      }
-    }
+  if (!id) {
+    console.error('Invalid ID provided for deleting post')
+    return
+  }
+  try {
+    await axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
+    console.log(`Post with ID ${id} has been deleted.`)
+    this.posts = this.posts.filter((post) => post.id !== id)
+    this.$toast.open({
+      message: `Post with ID ${id} has been deleted.`,
+      type: 'success',
+      duration: 2000
+    })
+  } catch (error) {
+    console.error(`Error deleting post with ID ${id}:`, error)
+    this.$toast.open({
+      message: `Error deleting post with ID ${id}. Please try again.`,
+      type: 'error',
+      duration: 2000
+    })
+  }
+}
   }
 }
 </script>
@@ -84,3 +102,4 @@ export default {
   color: white;
 }
 </style>
+

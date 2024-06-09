@@ -1,4 +1,6 @@
 <template>
+          <div class="wrapper">
+
     <div class="comments-container">
         <div class="comments-header">
             <h2 class="mb-4">Comments</h2>
@@ -15,6 +17,8 @@
             </div>
         </div>
     </div>
+
+</div>
 </template>
 
 <script>
