@@ -8,11 +8,11 @@
         <div class="comments-list">
             <div v-for="comment in comments" :key="comment.id" class="card comment-card">
                 <div class="card-body">
-                    <h4 class="card-title">{{ comment.name }}</h4>
+                    <h4 class="card-title">User Name:{{ comment.name }}</h4>
                     <hr>
-                    <p class="card-text">{{ comment.body }}</p>
+                    <p class="card-text"> Comment :{{ comment.body }}</p>
                     <hr>
-                    <p class="card-text">{{ comment.email }}</p>
+                    <p class="card-text"> Email: {{ comment.email }}</p>
                 </div>
             </div>
         </div>
@@ -25,11 +25,15 @@
 import axios from 'axios'
 
 export default {
+    // Returns an object containing the initial data for the component.
     data() {
         return {
             comments: []
         }
     },
+     // Mounts the component and fetches comments.
+     // This function is called when the component is mounted to the DOM.
+     // It calls the `fetchComments` method to retrieve comments from the server.
     mounted() {
         this.fetchComments()
     },

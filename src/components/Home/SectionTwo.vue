@@ -9,14 +9,14 @@
           <div class="mt-5"></div>
         </div>
         <div class="col-md-6 order-md-2">
-          <p class="text-justify">
+          <h2 class="text-justify">
             “KattyEfa NFT “<br />
             The image is a high-quality <br />
             digital painting with a <br />
             resolution of 5000x1250<br />
             pixels.<br />
             <span>$1.5 million </span>
-          </p>
+          </h2>
           <div class="">
             <CircleArrow />
           </div>

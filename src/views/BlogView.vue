@@ -52,7 +52,7 @@ export default {
     this.fetchPosts()
   },
   methods: {
-    // Fetches posts from  API and
+    // Fetches posts from API 
     async fetchPosts() {
       try {
         const response = await axios.get('https://jsonplaceholder.typicode.com/posts')

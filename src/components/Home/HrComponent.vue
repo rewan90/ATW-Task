@@ -24,12 +24,11 @@ h3 {
 }
 
 img {
-  width: 50px; /* set a fixed width for images */
-  height: 50px; /* set a fixed height for images */
-  margin-right: 10px; /* add some margin between image and text */
+  width: 50px; 
+  height: 50px; 
+  margin-right: 10px; 
 }
 
-/* Media queries for responsiveness */
 
 /* On small screens (less than 768px) */
 @media (max-width: 767px) {

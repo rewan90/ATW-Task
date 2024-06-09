@@ -49,6 +49,10 @@
 import axios from 'axios'
 
 export default {
+  
+   // Returns an object containing the initial data for the component.
+  //  post: an object with properties initialized as empty strings.
+// newPost: initialized as `null`.
   data() {
     return {
       post: {
@@ -59,6 +63,7 @@ export default {
     }
   },
   methods: {
+    //  adds a new post to the server and updates the component's state accordingly.
     async addPost() {
       try {
         const response = await axios.post('https://jsonplaceholder.typicode.com/posts', this.post)
@@ -69,6 +74,7 @@ export default {
         console.error(error)
       }
     },
+    //Resets the data of the post object.
     resetPostData() {
       this.post.title = ''
       this.post.content = ''

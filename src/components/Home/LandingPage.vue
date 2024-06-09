@@ -2,9 +2,11 @@
   <section class="hero-img">
     <nav class="navbar navbar-expand-lg navbar-light  shadow-0">
       <div class="container">
-        <a class="navbar-brand mx-5" href="#!">
+        <a class="navbar-brand mx-5" >
+        <RouterLink to="/">
           <img src="../../assets/logo.svg" alt="logo" width="150px" />
-        </a>
+        </RouterLink>
+      </a>
         <button
           class="navbar-toggler"
           type="button"

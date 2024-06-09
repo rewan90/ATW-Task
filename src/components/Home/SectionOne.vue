@@ -8,7 +8,7 @@
           </div>
         </div>
         <div class="col-md-6 order-md-1">
-          <p class="text-justify ">
+          <h2 class="text-justify ">
             “Moddy Character NFT “ <br>
             The image is a high-quality <br>
             digital painting with a <br>
@@ -16,7 +16,7 @@
          pixels and is optimized for<br>
           the web. <br>
             <span>$101,593 </span>
-          </p>
+          </h2>
           <div class="">
             <CircleArrow />
           </div>
