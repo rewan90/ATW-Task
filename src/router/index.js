@@ -5,6 +5,7 @@ import BlogView from '../views/BlogView.vue';
 import AddPost from '../views/AddPost.vue';
 import EditPost from '../views/EditPost.vue';
 import Comments from '../views/CommentsView.vue';
+import PageNotFound from '../views/PageNotFound.vue'
 
 const routes = [
   {
@@ -44,7 +45,12 @@ const routes = [
     path: '/comments',
     name: 'comments',
     component: Comments
-  }
+  },
+  
+  {
+    path: '/:pathMatch(.*)*',
+     component: PageNotFound }
+
 
 
 ];

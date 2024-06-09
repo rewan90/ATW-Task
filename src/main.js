@@ -13,7 +13,7 @@ import Swiper from 'swiper/bundle'
 import './assets/main.css'
 import 'swiper/css/bundle'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars,faHouse } from '@fortawesome/free-solid-svg-icons'
 import {
   faFacebook,
   faInstagram,
@@ -29,8 +29,7 @@ app.use(ToastPlugin);
 
 app.config.globalProperties.$swiper = swiper
 
-library.add(faBars)
-library.add(faFacebook)
+library.add(faBars,faHouse)
 library.add(faInstagram, faLinkedinIn, faTelegram,faFacebook,faTwitter, faYoutube)
 
 app.component('font-awesome-icon', FontAwesomeIcon)

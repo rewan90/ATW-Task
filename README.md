@@ -32,7 +32,7 @@ This is a simple Vue 3 application that uses Vue Router for client-side routing.
 - Font Awesome for icons
 - Vue Router for client-side routing
 - ESLint and Prettier for code formatting and linting
-# Blog View page that countain
+## Blog View page that countain
 - CRUD system
 - fetch data from jsonplaceholder
 - add new post
@@ -42,6 +42,4 @@ This is a simple Vue 3 application that uses Vue Router for client-side routing.
 - show all comments
 
 [api link](https://jsonplaceholder.typicode.com/)
-
-
 
